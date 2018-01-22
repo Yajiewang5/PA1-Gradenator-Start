@@ -23,13 +23,14 @@ public class PA1Main {
                 String average = parts[2];
 
                 // calculate the average score of different type of grade
-                String[] sub = average.trim().split("\\s+");
+                String[] sub = average.trim().split("\\s+");// split white space
                 double totalScore = 0;
                 double averageScore = 0;
                 for (int i = 0; i < sub.length; i++) {
                     totalScore += Double.valueOf(sub[i]);
                 }
-                averageScore += totalScore / (double) sub.length;
+
+                averageScore += totalScore / sub.length;
 
                 // find index of %
                 int index = percentage.indexOf("%");
